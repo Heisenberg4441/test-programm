@@ -1,12 +1,12 @@
 import Server from "./server";
 
-console.log("server started")
+console.log("server started");
 
-export const server = new Server("test-server")
+export const server = new Server("test-server");
 
 
-import './endpoints/security'
-import './endpoints/private'
-import './endpoints/public'
+import './endpoints/security';
+import './endpoints/private';
+import './endpoints/public';
 
-export const index = server.process
+export const index = server.process;

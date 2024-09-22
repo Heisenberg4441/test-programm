@@ -8,7 +8,5 @@ export const config = {
     DB_NAME: 'server'
 }
 
-console.log(`postgres://${config.DB_USERNAME}:${config.DB_PASSWORD}@${config.DB_IP}:${config.DB_PORT}/${config.DB_NAME}`)
-
-export const sql = postgres(`postgres://${config.DB_USERNAME}:${config.DB_PASSWORD}@${config.DB_IP}:${config.DB_PORT}/${config.DB_NAME}`)
+export const sql = postgres(`postgres://${config.DB_USERNAME}:${config.DB_PASSWORD}@${config.DB_IP}:${config.DB_PORT}/${config.DB_NAME}`);
 

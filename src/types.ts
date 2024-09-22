@@ -3,5 +3,16 @@ export type values = {
     product_name: string,
     quantity_of_products_in_shop: number,
     quantity_of_products_in_cart: number,
-    remaining_of_products_in_shop: string,
+    shop_id: number,
+}
+
+export type editQuantityValues = {
+    plu: number,
+    changeValue?: number,
+    changeShopValue?: number,
+    changeCartValue?: number,
+    delete: [
+        boolean,
+        boolean
+    ]
 }
