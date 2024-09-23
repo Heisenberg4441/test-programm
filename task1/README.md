@@ -15,5 +15,34 @@
 
 ## Создание/изменение/получение продуктов из PostgreSQL:
 Для того, чтобы создать/изменить/получить какой либо продукт из таблицы надо:
-#### Создать
-- POST запрос на адрес http:/localhost:3000/shop/createNewProduct с телом
+#### Создать продукт
+- POST запрос на адрес http://localhost:3000/shop/createNewProduct с телом {
+
+}
+#### Изменить остаток
+##### Изменение остатка в магазине
+- POST запрос на адрес http://localhost:3000/shop/editQuantityInShop с телом: `{
+    "plu": number,
+    "changeValue": number,
+    "delete": [
+        boolean
+    ]
+}`
+##### Изменение остатка в магазине
+- POST запрос на адрес http://localhost:3000/shop/editQuantityInCart с телом: `{
+    "plu": number,
+    "changeValue": number,
+    "delete": [
+        boolean
+    ]
+}`
+
+##### Изменить общий остаток(И в магазине, и в корзине)
+- POST запрос на адрес http://localhost:3000/shop/editQuantity с телом: `{
+    "plu": number,
+    "changeCartValue": number,
+    "changeShopValue": number,
+    "delete": [
+        boolean, boolean
+    ]
+}`
