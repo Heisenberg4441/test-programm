@@ -12,4 +12,4 @@
 - POST запрос на адрес http://localhost:3080/users/seed
 
 ### Исправление значения problems на true и подсчет измененных юзеров
--POST запрос на адрес http://localhost:3000/users/fix-problems
+-POST запрос на адрес http://localhost:3080/users/fix-problems
