@@ -21,24 +21,32 @@
 }
 #### Изменить остаток
 ##### Изменение остатка в магазине
-- POST запрос на адрес http://localhost:3000/shop/editQuantityInShop с телом: {
+- POST запрос на адрес http://localhost:3000/shop/editQuantityInShop с телом: 
+```
+{
     "plu": number,
     "changeValue": number,
     "delete": [
         boolean
     ]
 }
+```
 ##### Изменение остатка в магазине
-- POST запрос на адрес http://localhost:3000/shop/editQuantityInCart с телом: {
+- POST запрос на адрес http://localhost:3000/shop/editQuantityInCart с телом: 
+```
+{
     "plu": number,
     "changeValue": number,
     "delete": [
         boolean
     ]
 }
+```
 
 ##### Изменить общий остаток(И в магазине, и в корзине)
-- POST запрос на адрес http://localhost:3000/shop/editQuantity с телом: {
+- POST запрос на адрес http://localhost:3000/shop/editQuantity с телом: 
+```
+{
     "plu": number,
     "changeCartValue": number,
     "changeShopValue": number,
@@ -46,3 +54,4 @@
         boolean, boolean
     ]
 }
+```
