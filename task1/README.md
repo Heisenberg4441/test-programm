@@ -1,4 +1,4 @@
-# Задание один.
+# Задание 1.
 ## Инструкция по запуску:
 - npm install
 - npm start
@@ -12,6 +12,8 @@
 - POST запрос на адрес http://localhost:3000/shop/createNewProductTable
 - POST запрос на адрес http://localhost:3000/history/createNewOperationHistoryTable
 
+
+# Сервис 1
 ## Создание/изменение/получение продуктов из PostgreSQL:
 Для того, чтобы создать/изменить/получить какой либо продукт из таблицы надо:
 #### Создать продукт
@@ -59,5 +61,41 @@
     "delete": [
         boolean, boolean
     ]
+}
+```
+
+#### Получить остаток по фильтру(Должен быть хотя бы один параметр)
+- GET запрос на адрес http://localhost:3000/shop/getQuantityByFilter с телом:
+```
+{
+    "plu"?: number,
+    "quantity_of_products_in_shop"?: number,
+    "quantity_of_products_in_cart"?: number,
+    "shop_id"?: number
+}
+```
+
+#### Получить продукты по фильтру(Должен быть хотя бы один параметр)
+- GET запрос на адрес http://localhost:3000/shop/getProductsByFilter с телом: 
+```
+{
+    "plu"?: number,
+    "product_name"?: string
+}
+```
+
+# Сервис 2
+
+#### Получение всех операций
+- GET запрос на адрес http://localhost:3000/history/getAllOperations
+
+#### Получение операций по фильтру(Должен присутствовать хотя бы один параметр)
+- GET запрос на адрес http://localhost:3000/history/getOperationsByFilter с телом:
+```
+{
+    "shop_id?": number,
+    "plu"?: number,
+    "date"?: string,
+    "action"?: string
 }
 ```
